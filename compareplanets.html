@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo Espacial</title>
+    <link rel="stylesheet" href="cascade1space1.css"> <!-- Reutiliza el mismo CSS -->
+    <link rel="stylesheet" href="cascade2space2.css"> <!-- Reutiliza el mismo CSS -->
+
+</head>
+<body>
+    
+    <!-- Solo el contenedor del espacio -->
+  <!-- Menú de selección -->
+<div class="calculadora" id="menu-comparador">
+
+    <div class="select-container">
+        <a href="space1.html" ><button id="volverBtn2">Volver Pagina principal</button></a>
+
+        <label for="planet1">Planeta 1</label>
+        <select id="planet1">
+            <option value="mercurio">Mercurio</option>
+            <option value="venus">Venus</option>
+            <option value="tierra">Tierra</option>
+            <option value="marte">Marte</option>
+            <option value="jupiter">Júpiter</option>
+            <option value="saturno">Saturno</option>
+            <option value="urano">Urano</option>
+            <option value="neptuno">Neptuno</option>
+        </select>
+    </div>
+    <div class="select-container">
+        <label for="planet2">Planeta 2</label>
+        <select id="planet2">
+            <option value="mercurio">Mercurio</option>
+            <option value="venus">Venus</option>
+            <option value="tierra">Tierra</option>
+            <option value="marte">Marte</option>
+            <option value="jupiter">Júpiter</option>
+            <option value="saturno">Saturno</option>
+            <option value="urano">Urano</option>
+            <option value="neptuno">Neptuno</option>
+        </select>
+    </div>
+    <button id="comparePlanetsBtn">Comparar</button>
+</div>
+
+<!-- Resultados -->
+<div class="resultado-comparacion" id="resultado-comparacion" style="display: none;">
+    <h2>Comparación de Tamaños</h2>
+    <div id="circulos-container" style="display: flex; gap: 20px; align-items: center;"></div>
+    <button id="volverBtn">Volver</button>
+</div>
+
+    <!-- Reutiliza el mismo JavaScript -->
+    <script src="jscompareplanets1.js"></script>
+    <script src="script1space1.js"></script>
+    <script src="script2space1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabina Espacial</title>
+    <link rel="stylesheet" href="cascade1space1.css">
+</head>
+<body>
+    <!-- Título de la estación espacial -->
+    <div class="station-title">Estación Espacial Alfa Centauri (400 kilometros lejos de la tierra)</div>
+
+    <!-- Espacio y cabina -->
+    <div class="space" id="space"></div>
+    <div class="cockpit">
+        <div class="buttons">
+         
+            <!-- Botón de elegir nave con menú desplegable -->
+            <div class="ship-menu">
+                <div class="button" id="ship-button">Elegir nave</div>
+                <div class="ship-options" id="ship-options">
+                    <div class="ship-option" 
+                         data-name="Voyager 1" 
+                         data-speed="61,200" 
+                         data-year="1977"
+                         data-description="La nave más lejana de la humanidad, actualmente en el espacio interestelar">
+                        <div class="ship-icon">🚀</div>
+                        <div class="ship-info">
+                            <div class="ship-name">Voyager 1</div>
+                            <div class="ship-details">61,200 km/h • 1977</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ship-option" 
+                         data-name="Parker Solar Probe" 
+                         data-speed="700,000" 
+                         data-year="2018"
+                         data-description="La nave más rápida jamás construida, diseñada para estudiar el Sol">
+                        <div class="ship-icon">☀️</div>
+                        <div class="ship-info">
+                            <div class="ship-name">Parker Solar Probe</div>
+                            <div class="ship-details">700,000 km/h • 2018</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ship-option" 
+                         data-name="New Horizons" 
+                         data-speed="84,000" 
+                         data-year="2006"
+                         data-description="Primera nave en visitar Plutón y explorar el cinturón de Kuiper">
+                        <div class="ship-icon">🪐</div>
+                        <div class="ship-info">
+                            <div class="ship-name">New Horizons</div>
+                            <div class="ship-details">84,000 km/h • 2006</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ship-option" 
+                         data-name="Cassini" 
+                         data-speed="158,400" 
+                         data-year="1997"
+                         data-description="Exploró Saturno y sus lunas durante 13 años">
+                        <div class="ship-icon">🪐</div>
+                        <div class="ship-info">
+                            <div class="ship-name">Cassini</div>
+                            <div class="ship-details">158,400 km/h • 1997</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ship-option" 
+                         data-name="Voyager 2" 
+                         data-speed="55,230" 
+                         data-year="1977"
+                         data-description="Única nave en visitar los cuatro planetas gigantes exteriores">
+                        <div class="ship-icon">🌌</div>
+                        <div class="ship-info">
+                            <div class="ship-name">Voyager 2</div>
+                            <div class="ship-details">55,230 km/h • 1977</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ship-option" 
+                         data-name="Pioneer 10" 
+                         data-speed="131,200" 
+                         data-year="1972"
+                         data-description="Primera nave en atravesar el cinturón de asteroides">
+                        <div class="ship-icon">🛸</div>
+                        <div class="ship-info">
+                            <div class="ship-name">Pioneer 10</div>
+                            <div class="ship-details">131,200 km/h • 1972</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botón de velocidad de viaje con control deslizante -->
+            <div class="speed-menu">
+                <div class="button" id="speed-button">Velocidad de viaje</div>
+                <div class="speed-control" id="speed-control">
+                    <div class="speed-header">
+                        <div class="speed-title">Control de Velocidad</div>
+                        <div class="speed-value" id="speed-value">50%</div>
+                    </div>
+                    
+                    <div class="speed-slider-container">
+                        <div class="speed-track"></div>
+                        <input type="range" min="0" max="100" value="50" class="speed-slider" id="speed-slider">
+                        <div class="speed-labels">
+                            <span>0%</span>
+                            <span>25%</span>
+                            <span>50%</span>
+                            <span>75%</span>
+                            <span>100%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-indicator" id="risk-indicator">
+                        <div class="risk-title" id="risk-title">
+                            <span>🟡</span>
+                            <span>Riesgo Medio</span>
+                        </div>
+                        <div class="risk-description" id="risk-description">
+                            El motor opera a velocidad moderada con sistemas de seguridad activos.
+                        </div>
+                        <div class="risk-probability" id="risk-probability">
+                            Probabilidad de fallo: 1/200
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button">Arrancar viaje</div>
+            
+            <!-- Nuevo menú de selección de planetas -->
+            <div class="planet-select-menu">
+                <div class="button" id="planet-select-button">Seleccionar planeta</div>
+                <div class="planet-select-options" id="planet-select-options">
+                    <div class="planet-select-option" data-name="Mercurio" data-distance="57.9 millones km">
+                        <div class="planet-select-icon"><img src="mercurio.png" alt="Mercurio"></div>
+                        <div class="planet-select-info">
+                            <div class="planet-select-name">Mercurio</div>
+                            <div class="planet-select-details">57.9 millones km</div>
+                        </div>
+                    </div>
+                    
+                    <div class="planet-select-option" data-name="Venus" data-distance="108.2 millones km">
+                        <div class="planet-select-icon"><img src="venus.png" alt="Venus"></div>
+                        <div class="planet-select-info">
+                            <div class="planet-select-name">Venus</div>
+                            <div class="planet-select-details">108.2 millones km</div>
+                        </div>
+                    </div>
+                    
+                    <div class="planet-select-option" data-name="Tierra" data-distance="0 km (nuestra posición)">
+                        <div class="planet-select-icon"><img src="tierra.png" alt="Tierra"></div>
+                        <div class="planet-select-info">
+                            <div class="planet-select-name">Tierra</div>
+                            <div class="planet-select-details">0 km (nuestra posición)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="planet-select-option" data-name="Marte" data-distance="227.9 millones km">
+                        <div class="planet-select-icon"><img src="marte.png" alt="Marte"></div>
+                        <div class="planet-select-info">
+                            <div class="planet-select-name">Marte</div>
+                            <div class="planet-select-details">227.9 millones km</div>
+                        </div>
+                    </div>
+                    
+                    <div class="planet-select-option" data-name="Júpiter" data-distance="778.3 millones km">
+                        <div class="planet-select-icon"><img src="jupiter.png" alt="Júpiter"></div>
+                        <div class="planet-select-info">
+                            <div class="planet-select-name">Júpiter</div>
+                            <div class="planet-select-details">778.3 millones km</div>
+                        </div>
+                    </div>
+                    
+                    <div class="planet-select-option" data-name="Saturno" data-distance="1,427 millones km">
+                        <div class="planet-select-icon"><img src="saturno.png" alt="Saturno"></div>
+                        <div class="planet-select-info">
+                            <div class="planet-select-name">Saturno</div>
+                            <div class="planet-select-details">1,427 millones km</div>
+                        </div>
+                    </div>
+                    
+                    <div class="planet-select-option" data-name="Urano" data-distance="2,871 millones km">
+                        <div class="planet-select-icon"><img src="urano.png" alt="Urano"></div>
+                        <div class="planet-select-info">
+                            <div class="planet-select-name">Urano</div>
+                            <div class="planet-select-details">2,871 millones km</div>
+                        </div>
+                    </div>
+                    
+                    <div class="planet-select-option" data-name="Neptuno" data-distance="4,498 millones km">
+                        <div class="planet-select-icon"><img src="neptuno.png" alt="Neptuno"></div>
+                        <div class="planet-select-info">
+                            <div class="planet-select-name">Neptuno</div>
+                            <div class="planet-select-details">4,498 millones km</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botón de planetas y menú desplegable (existente) -->
+        <div class="planet-menu">
+            <button id="compare-button"><a href="compareplanets.html">🪐 Comparar planetas</a></button>
+            <!---->
+            <button class="planet-button">🌌 Planetas</button>
+            
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cuadro de información de planetas -->
+    <div class="info-box" id="info-box">
+        <img src="planet-icon.png" alt="Planeta" class="info-icon" id="imagePreview">
+        <p><strong>Nombre:</strong> <span id="info-name"></span></p>
+        <p><strong>Tamaño (Tierra = 1):</strong> <span id="info-size"></span></p>
+        <p><strong>Distancia (millones de km):</strong> <span id="info-distance"></span></p>
+    </div>
+    
+    <!-- Tooltip de información de naves -->
+    <div class="ship-tooltip" id="ship-tooltip">
+        <h3 id="ship-tooltip-name"></h3>
+        <p><strong>Velocidad máxima:</strong> <span class="highlight" id="ship-tooltip-speed"></span></p>
+        <p><strong>Año de lanzamiento:</strong> <span class="highlight" id="ship-tooltip-year"></span></p>
+        <p id="ship-tooltip-description"></p>
+    </div>
+    
+    <!-- Mensaje de selección de planeta -->
+    <div class="selection-message" id="selection-message">
+        <h3 id="selected-planet-name"></h3>
+        <p>Distancia: <span id="selected-planet-distance"></span></p>
+    </div>
+    <script src="script1space1.js"></script> <!-- Enlace al archivo JavaScript -->
+
+   
+
+</body>
+</html>
