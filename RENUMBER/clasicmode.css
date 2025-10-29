@@ -1,0 +1,293 @@
+.bots:hover {
+    transform: scale(1.1);
+    border: rgb(0, 47, 255) 3px solid;
+    cursor:pointer;
+}
+#bots{
+    margin-left:2%;
+    margin-right: auto;
+    margin-top:4%;
+    width: 1000px;
+    height: 800px;
+    background-color: aqua;
+    border:black 4px solid;
+    padding:50px;
+    display : flex;
+}
+.bots
+{
+width:150px;
+height:150px;
+border:black 2px solid;
+background-color: gold;
+margin-right: 50px;;
+}
+img
+{
+    width: 100%;
+    height: 100%;
+}
+#falsestats
+{
+    width: 300px;
+    height: 500px;
+    margin-top: 4%;
+    margin-right: 0;
+    display:block;
+    margin-left: 2%;
+}
+#stats
+{
+    display:block;
+    width: 300px;
+    height: 600px;
+    background-color: rgb(235, 27, 194);
+    border:black 4px solid;
+    margin-top: 4%;
+    margin-right: 0;
+    display:none;
+
+}
+#botsandstats
+{
+    display:flex;
+}
+#name
+{
+    font-family: Arial, Helvetica, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align:center;
+    color:white;
+}
+#statimg
+{
+    width: 150px;
+    height: 150px;
+    border: black 2px solid;
+   
+    margin-left: 25%;
+
+}
+h2
+{
+    text-align: center;
+    color:white;
+}
+h1
+{
+    text-align: center;
+    color:white;
+}
+#points 
+{
+    color : goldenrod;
+}
+#numbers
+{
+    color:blue;
+}
+#bot2
+{
+    background-color: blanchedalmond;
+}
+
+.modal-content>h2{
+    color:black;
+    text-align:left;
+}
+
+#game
+{
+    margin-left:20%;
+    margin-right: auto;
+    margin-top:4%;
+    width: 1000px;
+    height: 800px;
+    background-color: aqua;
+    border:black 4px solid;
+    padding:50px;
+    display : none;
+}
+#imggame
+{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#characterNameGame
+{
+    color:rgb(0, 0, 0);
+    font-size: 40px;
+}
+#return
+{
+    width: 100px;
+    height: 100px;
+}
+#return:hover
+{
+    cursor:pointer;
+}
+.number-description
+{
+    color:black;
+    font-size:30px;
+}
+#pointsGame
+{
+    color:goldenrod;
+    font-size:40px;
+}
+#playButton
+{
+    border:black 3px solid;
+    background-color: red;
+    font-size:100px;
+    height: 120px;
+    width: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: auto;
+    margin-left:auto;
+}
+#playButton:hover
+{
+    cursor:pointer;
+    background-color: rgb(241, 83, 83);
+
+}
+#renumberGame
+{
+    margin-left:20%;
+    margin-right: auto;
+    margin-top:4%;
+    width: 1000px;
+    height: 800px;
+    background-color: aqua;
+    border:black 4px solid;
+    padding:50px;
+    display : none;
+}
+#imggame2
+{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#return2
+{
+    width: 100px;
+    height: 100px;
+    
+}
+#return2:hover
+{
+    cursor:pointer;
+}
+#newnumber
+{
+    color:black;
+    text-align:center;
+    font-size:30px;
+    margin-top:10%;
+}
+#numberInput
+{
+    background-color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+    height: 50px;
+    margin-left: 27%;
+    margin-top:10%;
+    margin-bottom:5px;
+    font-size: 40px;
+}
+#apllyButton
+{
+    width: 400px;
+    height: 75px;
+    background-color: red;
+    border:3px solid black;
+    margin-left: 27%;
+    font-size:60px;
+    text-align:center;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+
+}
+#apllyButton:hover
+{
+    cursor:pointer;
+    background-color:rgb(241, 83, 83);
+}
+
+#lostd
+{
+    margin-left:20%;
+    margin-right: auto;
+    margin-top:4%;
+    width: 1000px;
+    height: 800px;
+    background-color: aqua;
+    border:black 4px solid;
+    padding:50px;
+    display : none;
+}
+
+#wind
+{
+    margin-left:20%;
+    margin-right: auto;
+    margin-top:4%;
+    width: 1000px;
+    height: 800px;
+    background-color: aqua;
+    border:black 4px solid;
+    padding:50px;
+    display : none;
+}
+#return3
+{
+    width: 100px;
+    height: 100px;
+    
+}
+#return3:hover
+{
+    cursor:pointer;
+}
+#return4
+{
+    width: 100px;
+    height: 100px;
+    
+}
+#return4:hover
+{
+    cursor:pointer;
+}
+#losttext
+{
+    color:red;
+    font-size: 70px;
+    text-align: center;
+}
+#wintext
+{
+    color:green;
+    font-size: 70px;
+    text-align: center;
+}
+#lesspoints
+{
+    color:black;
+    font-size:40px;
+    text-align: center;
+}
+#pointsmore
+{
+    color:black;
+    font-size:40px;
+    text-align:center;
+}
