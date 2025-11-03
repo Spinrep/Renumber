@@ -1,0 +1,271 @@
+/* online.css */
+
+.screen {
+    display: none;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+}
+
+.screen.active {
+    display: block;
+}
+
+.online-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.online-btn {
+    background-image: url('buttons/light_button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    padding: 20px 40px;
+    font-family: 'PixelFont', Arial, sans-serif;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    min-height: 80px;
+    width: 100%;
+}
+
+body.dark-theme .online-btn {
+    background-image: url('buttons/dark_button.png');
+    color: #fff;
+}
+
+.online-btn:hover {
+    transform: scale(1.05);
+}
+
+.online-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.online-btn.secondary {
+    background-image: url('buttons/light_button.png');
+    opacity: 0.7;
+}
+
+body.dark-theme .online-btn.secondary {
+    background-image: url('buttons/dark_button.png');
+}
+
+.online-btn.small {
+    min-height: 50px;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+input[type="text"] {
+    font-family: 'PixelFont', Arial, sans-serif;
+    font-size: 24px;
+    padding: 15px;
+    border: 3px solid #333;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+body.dark-theme input[type="text"] {
+    background-color: #222;
+    color: #fff;
+    border-color: #fff;
+}
+
+.codigo-sala {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.codigo-sala h2 {
+    font-size: 48px;
+    letter-spacing: 10px;
+    margin: 20px 0;
+    color: #000;
+}
+
+body.dark-theme .codigo-sala h2 {
+    color: #fff;
+}
+
+.waiting-text {
+    font-size: 21px;
+    color: #666;
+    animation: pulse 2s infinite;
+}
+
+body.dark-theme .waiting-text {
+    color: #aaa;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.error-message {
+    color: #f00;
+    font-size: 18px;
+    text-align: center;
+    min-height: 30px;
+    margin-top: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.button-group .online-btn {
+    flex: 1;
+}
+
+/* Estilos del juego */
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.game-header h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+body.dark-theme .game-header h2 {
+    color: #fff;
+}
+
+.game-header h3 {
+    font-size: 24px;
+    color: #666;
+}
+
+body.dark-theme .game-header h3 {
+    color: #aaa;
+}
+
+.players-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+.player-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 3px solid #333;
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+}
+
+body.dark-theme .player-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: #fff;
+}
+
+.player-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 21px;
+    color: #000;
+}
+
+body.dark-theme .player-card h3 {
+    color: #fff;
+}
+
+.player-card.active {
+    border-color: #0f0;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.player-status {
+    font-size: 48px;
+    margin-top: 10px;
+}
+
+.vs {
+    font-size: 42px;
+    font-weight: bold;
+    color: #000;
+}
+
+body.dark-theme .vs {
+    color: #fff;
+}
+
+.input-area {
+    display: flex;
+    gap: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.input-area input {
+    flex: 1;
+    margin: 0;
+}
+
+.input-area button {
+    width: auto;
+    min-width: 150px;
+}
+
+.game-messages {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid #333;
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    min-height: 100px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 18px;
+}
+
+body.dark-theme .game-messages {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: #fff;
+    color: #fff;
+}
+
+.game-messages p {
+    margin: 5px 0;
+}
+
+#resultadoScreen .container h1 {
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+
+#resultadoScreen .container p {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+body.dark-theme #resultadoScreen .container p {
+    color: #fff;
+}
