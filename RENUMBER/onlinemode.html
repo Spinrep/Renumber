@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>About - Renumber Game</title>
+    <title>Online Mode - Renumber Game</title>
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="online.css">
 </head>
@@ -17,8 +17,87 @@
         </ul>
     </nav>
 
-   
+    <!-- Pantalla de Menu -->
+    <div id="menuOnline" class="screen active">
+        <div class="container">
+            <h1>Renumber Online</h1>
+            <div class="online-options">
+                <button id="crearSalaBtn" class="online-btn">Crear Sala</button>
+                <button id="unirseSalaBtn" class="online-btn">Unirse a Sala</button>
+            </div>
+        </div>
+    </div>
 
+    <!-- Pantalla de Unirse -->
+    <div id="unirseScreen" class="screen">
+        <div class="container">
+            <h1>Unirse a Sala</h1>
+            <input type="text" id="codigoInput" placeholder="Ingresa el código" maxlength="6">
+            <input type="text" id="nombreJugador2" placeholder="Tu nombre" maxlength="15">
+            <div class="button-group">
+                <button id="unirseBtn" class="online-btn">Unirse</button>
+                <button id="cancelarUnirseBtn" class="online-btn secondary">Cancelar</button>
+            </div>
+            <p id="errorUnirse" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Pantalla de Espera -->
+    <div id="esperaScreen" class="screen">
+        <div class="container">
+            <h1>Sala Creada</h1>
+            <div class="codigo-sala">
+                <p>Comparte este código:</p>
+                <h2 id="codigoSala">------</h2>
+                <button id="copiarCodigoBtn" class="online-btn small">Copiar</button>
+            </div>
+            <p class="waiting-text">Esperando al otro jugador...</p>
+            <input type="text" id="nombreJugador1" placeholder="Tu nombre" maxlength="15">
+            <button id="cancelarEsperaBtn" class="online-btn secondary">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de Juego -->
+    <div id="juegoScreen" class="screen">
+        <div class="game-container">
+            <div class="game-header">
+                <h2 id="turnoActual">Esperando...</h2>
+                <h3 id="secuenciaDisplay">Secuencia: -</h3>
+            </div>
+            
+            <div class="players-info">
+                <div class="player-card" id="player1Card">
+                    <h3 id="player1Name">Jugador 1</h3>
+                    <div class="player-status" id="player1Status">●</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="player-card" id="player2Card">
+                    <h3 id="player2Name">Jugador 2</h3>
+                    <div class="player-status" id="player2Status">○</div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="secuenciaInput" placeholder="Ingresa la secuencia" disabled>
+                <button id="enviarJugadaBtn" class="online-btn" disabled>Enviar</button>
+            </div>
+
+            <div id="gameMessages" class="game-messages"></div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Resultado -->
+    <div id="resultadoScreen" class="screen">
+        <div class="container">
+            <h1 id="resultadoTitulo">¡Victoria!</h1>
+            <p id="resultadoMensaje"></p>
+            <button id="volverMenuBtn" class="online-btn">Volver al Menú</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
     <script src="menu.js"></script>
     <script src="onlinemode.js"></script>
     
